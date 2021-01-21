@@ -7,7 +7,7 @@ rm(list=ls())
 # code_path is where you are storing the code. 
 # data_and_models_path is where you are storing the data and models (these files can get large). 
 code_path = "~/openpolicing/"
-data_and_models_path = "/share/data/policing-data/final_openpolicing_data_and_models/"
+data_and_models_path = "/data_and_models/data/"
 setwd(code_path)
 
 # First, source widely used utility scripts. 
@@ -24,10 +24,10 @@ source('src/util/theme_for_plots.R') # ggplot theme + code to keep plots consist
 # Which analyses to run: 
 # modify the parameters below depending on which analyses you want to run and what your computing resources are. 
 n_cores = 1 # number of cores to use in processing data. 
-install_libraries = FALSE # install libraries.
-reprocess_census_data = FALSE # process the raw Census data needed to compute stop rates. 
+install_libraries = TRUE # install libraries.
+reprocess_census_data = TRUE # process the raw Census data needed to compute stop rates. 
 reprocess_raw_state_data = FALSE # reprocess raw state data (takes a few hours)
-reaggregate = FALSE # reaggregate state data into convenient aggregate statistics (takes some time)
+reaggregate = TRUE # reaggregate state data into convenient aggregate statistics (takes some time)
 rerun_regressions = FALSE # rerun regressions for binary variables (takes some time)
 rerun_regressions_on_individual_states = FALSE # rerun disparate impact regressions on individual states (robustness check; takes some time).  
 rerun_threshold_test = FALSE # refit all threshold test models (takes roughly a day, on 5 cores)
