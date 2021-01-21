@@ -7,7 +7,7 @@ rm(list=ls())
 # code_path is where you are storing the code. 
 # data_and_models_path is where you are storing the data and models (these files can get large). 
 code_path = "~/openpolicing/"
-data_and_models_path = "~/openpolicing/data_and_models/data/"
+data_and_models_path = "~/openpolicing/data_and_models/data"
 setwd(code_path)
 
 # First, source widely used utility scripts. 
